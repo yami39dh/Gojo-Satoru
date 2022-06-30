@@ -22,9 +22,9 @@ global.APIKeys = {
 global.owner = ['96891103640']
 global.premium = ['96891103640']
 global.ownernomer = '96891103640'
-global.ownername = '♛ 𝐒𝐀𝐍𝐎 ♛'
-global.botname = '♛ 𝐆𝐎𝐉𝐎 ♛'
-global.footer = '🅗 𝐇.𝐍.𝐑 🅗 | ♛ 𝐆𝐎𝐉𝐎 ♛'
+global.ownername = '♛ مايكي ♛'
+global.botname = '♛ غوجو ♛'
+global.footer = ' 🏮 O-T-A-K-U |🎗️| G-O-L-D 🏮 | ♛ غوجو ♛'
 global.ig = 'https://github.com/nexusNw'
 global.region = 'India, South India, Kerala'
 global.sc = 'https://chat.whatsapp.com/DtaFqOin5pOIEtpz6b5Y4m'
@@ -44,7 +44,7 @@ global.mess = {
     bot: '*「هـذا الامـر مـخـصـص لـ الـبـوت」◣*',
     wait: '*「انـتـظـر مـن فـضـلـك」◣*',
     error: 'Error! Maybe Api Key Is Expired🤔!',
-    endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
+    endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 1000 Hours',
 }
     global.limitawal = {
     premium: "Infinity",
@@ -59,7 +59,7 @@ global.mess = {
    umpanawal: 5,
    potionawal: 1
 }
-global.thumb = fs.readFileSync('./GojoMedia/gojo.jpg')
+global.thumb = fs.readFileSync('./GojoMedia/ko.jpg')
 global.flaming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.fluming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=fluffy-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.flarun = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
