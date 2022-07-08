@@ -1450,7 +1450,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 reply(mess.success)
                 }
                 break
-            case 'tagall': {
+	case 'tagall': case `منشن`: {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -2062,7 +2062,7 @@ break
         n = result
         images = n[Math.floor(Math.random() * n.length)].url
         let buttons = [
-                    {buttonId: `gimage ${text}`, buttonText: {displayText: '「 التالي」◣'}, type: 1}
+                    {buttonId: `image ${text}`, buttonText: {displayText: '「 التالي」◣'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: images },
