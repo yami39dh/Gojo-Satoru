@@ -1146,12 +1146,12 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
-            case 'mysoulmate': {
+            case 'زوجني': {
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `👫Your Match Is
+            let jawab = `「مبروك واعتبره/ا زوجتك 🤡」◣
 
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
@@ -1161,13 +1161,13 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
             }
             break
-            case 'couple': {
+            case 'زواج': {
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let orang = member[Math.floor(Math.random() * member.length)]
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-Cieeee, What's Going On❤️💖👀`
+	    「معلش زوجناكم لأنكم تصلحون لبعض 🤡」◣`
             let menst = [orang, jodoh]
             let buttons = [
                         { buttonId: '❤️', buttonText: { displayText: '❤️' }, type: 1 }
@@ -1454,11 +1454,11 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝ 
+let teks = `「المنشن الجماعي」◣
  
  ➲ *Message : ${q ? q : 'no message'}*\n\n`
                 for (let mem of participants) {
-                teks += `🐦 @${mem.id.split('@')[0]}\n`
+                teks += `👤 @${mem.id.split('@')[0]}\n`
                 }
                 GojoMdNx.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -2055,20 +2055,19 @@ break
                 })
                 }
                 break
-        case 'gimage': case 'googleimage': {
+        case 'image': case 'صورة': {
         if (!text) return reply(`Example : ${prefix + command} gojo`)
         let gis = require('g-i-s')
         gis(text, async (error, result) => {
         n = result
         images = n[Math.floor(Math.random() * n.length)].url
         let buttons = [
-                    {buttonId: `gimage ${text}`, buttonText: {displayText: '➡️➡️Next Image➡️➡️'}, type: 1}
+                    {buttonId: `gimage ${text}`, buttonText: {displayText: '「 التالي」◣'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: images },
-                    caption: `*-------「 GIMAGE SEARCH 」-------*
-🤠 *Query* : ${text}
-🔗 *Media Url* : ${images}`,
+                    caption: `*-------「 صورة 」-------*
+「 البحث」◣ : ${text}`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2077,28 +2076,23 @@ break
         })
         }
         break
-	    case 'play': case 'song': case 'ytplay': {
+	    case 'play': case 'فيديو': case 'ytplay': {
                 if (!text) return reply(`Example : ${prefix + command} Stay`)
                 let yts = require("yt-search")
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
                 let buttons = [
-                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '🎶Audio🎶'}, type: 1},
-                    {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
+                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '🎶مقطع صوتي🎶'}, type: 1},
+                    {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '📽️فيديو📽️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-🐦 Title : ${anu.title}
-🐦 Ext : Search
-🐦 ID : ${anu.videoId}
-🐦 Duration : ${anu.timestamp}
-🐦 Viewes : ${anu.views}
-🐦 Uploaded On : ${anu.ago}
-🐦 Author : ${anu.author.name}
-🐦 Channel : ${anu.author.url}
-🐦 Description : ${anu.description}
-🐦 Url : ${anu.url}`,
+: ${anu.title}
+「 مدة المقطع 」◣ : ${anu.timestamp}
+「 عدد المشاهدات 」◣: ${anu.views}
+「 تم تحميله」◣ : ${anu.ago}
+「 الوصف」◣ : ${anu.description}`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2358,12 +2352,12 @@ break
                 GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generated Random ' + command }, { quoted: m })
             }
             break
-	    case 'couplepp':  case 'ppcouple': {
+	    case 'couplepp':  case 'طقم': {
                 reply(mess.wait)
                 let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
                 let random = anu[Math.floor(Math.random() * anu.length)]
-                GojoMdNx.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male🙎🏻‍♂️` }, { quoted: m })
-                GojoMdNx.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female🙎🏻‍♀️` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: random.male }, caption: `「 ولد 」「👦🏻」◣`}, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: random.female }, caption: `「 بنت 」「👧🏻」◣` }, { quoted: m })
             }
 	    break
             case 'coffee': case 'kopi': {
@@ -3381,11 +3375,9 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 └┬❖ 「 ${pushname} 」
 ││✑「مـعـك بـوت غـوجـو 👋🏻」◣
 ││✑「مـن مـمـلـكـة غولد 🤗」◣
-││✑「https://chat.whatsapp.com/DXyUbHeacdM7rHIDXWiBpA」◣
 │└───────────────┈ ⳹
  「 مـعـلـومـات عـن الـبـوت 」
 │✙「 اسـم الـبـوت 」◣ : 「 غوجو ✨🤞🏻 」◣
-│✙「 اسـم الـمـالـك 」◣ : 「 ♛ مايكي ♛ 」◣
 │✙「 رقـم الـمـالـك 」◣ : ${global.owner}
 │✙「عـدد الـمـسـتـخـدمـيـن」◣ : ${Object.keys(global.db.data.users).length}
 └┬──────────────┈ ⳹
@@ -3438,11 +3430,9 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 └┬❖ 「 ${pushname} 」
 ││✑「مـعـك بـوت غـوجـو 👋🏻」◣
 ││✑「مـن مـمـلـكـة غولد 🤗」◣
-││✑「https://chat.whatsapp.com/DXyUbHeacdM7rHIDXWiBpA」◣
 │└───────────────┈ ⳹
  「 مـعـلـومـات عـن الـبـوت 」
 │✙「 اسـم الـبـوت 」◣ : 「 غوجو ✨🤞🏻 」◣
-│✙「 اسـم الـمـالـك 」◣ : 「 ♛ مايكي ♛ 」◣
 │✙「 رقـم الـمـالـك 」◣ : ${global.owner}
 │✙「عـدد الـمـسـتـخـدمـيـن」◣ : ${Object.keys(global.db.data.users).length}
 └┬──────────────┈ ⳹
