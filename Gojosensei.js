@@ -1151,7 +1151,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `「مبروك واعتبره/ا زوجتك 🤡」◣
+            let jawab = `「مبروك واعتبره/ا زوجك/تك 🤡」◣
 
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
