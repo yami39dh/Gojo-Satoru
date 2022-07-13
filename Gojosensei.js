@@ -1273,7 +1273,7 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
       case 'حزين':
       case 'مجنون':
       case 'بشع':
-      case 'kala':
+      case 'صنم':
       case 'gora':
       case 'chutiya':
       case 'nibba':
@@ -1863,10 +1863,10 @@ break
                  GojoMdNx.sendTextWithMentions(m.chat, teks, m)
              }
              break
-             case 'listonlinexxx': case 'onlinelistxxx': {
+             case 'قائمة المتصلين': case 'المتصلين': {
                     let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
                     let online = [...Object.keys(store.presences[id]), botNumber]
-                    GojoMdNx.sendText(m.chat, 'Online List:\n\n' + online.map(v => '🐦 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+                    GojoMdNx.sendText(m.chat, '「 الموجودين الأن 」◣\n\n' + online.map(v => '👤 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
              }
              break
             case 'sticker': case 's': case 'stickergif': case 'sgif': {
@@ -2114,11 +2114,11 @@ break
             break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 720p`)
-                let quality = args[1] ? args[1] : '720p'
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
+                let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: ` ${media.title}\n: ${media.filesizeF}\n: ${isUrl(text)}\nMP3\nResolution : ${args[1] || '720p'}` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: ` ${media.title}\n: ${media.filesizeF}\n: ${isUrl(text)}\nMP3\nResolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
 	    case 'getmusicxxx': {
@@ -3484,7 +3484,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "قائمة الخيارات",
 								"rows": [
 									{
-										"title" "القائمة الاساسية",
+										"title": "القائمة الأساسية",
 										"description": "...",
 										"rowId": `${prefix}mainmenu`
 									}
