@@ -3863,20 +3863,8 @@ case 'mainmenu':
 var unicorn = await getBuffer(picak+'Main Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 MAIN 」
-┃╠ ${prefix}alive
-┃╠ ${prefix}script
-┃╠ ${prefix}speedtest
-┃╠ ${prefix}ping
-┃╠ ${prefix}owner
-┃╠ ${prefix}menu
-┃╠ ${prefix}delete
-┃╠ ${prefix}chatinfo
-┃╠ ${prefix}quoted
-┃╠ ${prefix}listpc
-┃╠ ${prefix}listgc
-┃╠ ${prefix}donate
-┃╠ ${prefix}report [bug]
+┃╔═✪「 ا 」
+┃╠ ${prefix}ال
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -3885,27 +3873,8 @@ case 'grupmenu': case 'groupmenu':
 var unicorn = await getBuffer(picak+'Group Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 GROUP 」	        
-┃╠${prefix}grouplink
-┃╠${prefix}ephemeral [option]
-┃╠${prefix}setgcpp [image]
-┃╠${prefix}setname [text]
-┃╠${prefix}setdesc [text]
-┃╠${prefix}group [text]
-┃╠${prefix}editinfo [option]
-┃╠${prefix}add [user]
-┃╠${prefix}kick [reply/tag]
-┃╠${prefix}hidetag [text]
-┃╠${prefix}tagall [text]
-┃╠${prefix}antilink [on/off]
-┃╠${prefix}mute [on/off]
-┃╠${prefix}promote [reply/tag]
-┃╠${prefix}demote [reply/tag]
-┃╠${prefix}vote
-┃╠${prefix}devote
-┃╠${prefix}upvote
-┃╠${prefix}checkvote
-┃╠${prefix}delvote
+┃╔═✪「 ب 」	        
+┃╠ا
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -3914,16 +3883,8 @@ case 'rpgmenu':
 var unicorn = await getBuffer(picak+'Rpg Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 RPG 」	        
-┃╠${prefix}hunting
-┃╠${prefix}mining
-┃╠${prefix}heal
-┃╠${prefix}limituser
-┃╠${prefix}profile
-┃╠${prefix}inventory
-┃╠${prefix}leaderboard
-┃╠${prefix}buy [option]
-┃╠${prefix}sell [option]
+┃╔═✪「 ب 」	        
+┃╠${prefix}q
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -3932,51 +3893,11 @@ case 'funmenu':
 var unicorn = await getBuffer(picak+'Fun Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 FUN 」	        
+┃╔═✪「 ا 」	        
 ┃╠ ${prefix}how [text
 ┃╠ ${prefix}when [text]
 ┃╠ ${prefix}is [text]
-┃╠ ${prefix}what [text]
-┃╠ ${prefix}can [text]
-┃╠ ${prefix}rate [text]
-┃╠ ${prefix}wangy [text]
-┃╠ ${prefix}beautifulcheck [tag]
-┃╠ ${prefix}awesomecheck [tag]
-┃╠ ${prefix}prettycheck [tag]
-┃╠ ${prefix}lesbiancheck [tag]
-┃╠ ${prefix}gaycheck [tag]
-┃╠ ${prefix}cutecheck [tag]
-┃╠ ${prefix}uglycheck [tag]
-┃╠ ${prefix}hornycheck [tag]
-┃╠ ${prefix}charactercheck [tag]
-┃╠ ${prefix}lovelycheck [tag]
-┃╠ ${prefix}couple
-┃╠ ${prefix}mysoulmate
-┃╠ ${prefix}hot
-┃╠ ${prefix}sexy
-┃╠ ${prefix}kind
-┃╠ ${prefix}handsome
-┃╠ ${prefix}beautiful
-┃╠ ${prefix}cute
-┃╠ ${prefix}pretty
-┃╠ ${prefix}lesbian
-┃╠ ${prefix}noob
-┃╠ ${prefix}bastard
-┃╠ ${prefix}foolish
-┃╠ ${prefix}nerd
-┃╠ ${prefix}asshole
-┃╠ ${prefix}gay
-┃╠ ${prefix}smart
-┃╠ ${prefix}stubble
-┃╠ ${prefix}dog
-┃╠ ${prefix}horny
-┃╠ ${prefix}cunt
-┃╠ ${prefix}wibu
-┃╠ ${prefix}tictactoe
-┃╠ ${prefix}delttt
-┃╠ ${prefix}guess [option]
-┃╠ ${prefix}math [mode]
-┃╠ ${prefix}suitpvp [tag]
+┃╠ ${prefix}what 
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
