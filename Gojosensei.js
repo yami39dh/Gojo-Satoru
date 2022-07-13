@@ -1307,8 +1307,8 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `「اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]} 」◣
-	    「لا تأخذونها جد الله يهديكم 🥲 」◣`
+            let jawab = `「 اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]} 」◣
+	    「 لا تأخذونها جد الله يهديكم 🥲 」◣`
             let ments = [me, jodoh]
             let buttons = [
                         { buttonId: '「 اتفق😂 」◣', buttonText: { displayText: '「 اتفق😂 」◣' }, type: 1 }
