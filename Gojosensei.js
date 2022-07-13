@@ -3475,10 +3475,10 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 case 'command': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\n\n`,
-                    buttonText: "Menu",
-                    footerText: `${global.footer}`,
+                    title: `「 مرحبا👋🏻 」◣`,
+                    description: `「 اختر قائمة من فضلك 」◣\n\n`,
+                    buttonText: "「 القائمة 」◣",
+                    footerText: `「 تحت الصيانة ⚙️」◣`,
                     listType: "SINGLE_SELECT",
                     sections: [{
 								"title": "قائمة الخيارات",
