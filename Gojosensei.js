@@ -1153,10 +1153,10 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `「مبروك واعتبره/ا زوجك/تك 🤡」◣
 
-@${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
+@${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}/n/n_「اضغط اقبل اذا موافق 😂🤡」◣`
             let ments = [me, jodoh]
             let buttons = [
-                        { buttonId: '❤️', buttonText: { displayText: '❤️' }, type: 1 }
+                        { buttonId: '「اقبل🤗」◣', buttonText: { displayText: '「اقبل🤗」◣' }, type: 1 }
                     ]
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
             }
@@ -1167,10 +1167,10 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             let orang = member[Math.floor(Math.random() * member.length)]
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-	    「معلش زوجناكم لأنكم تصلحون لبعض 🤡」◣`
+	    「معلش زوجناكم لأنكم تصلحون لبعض 🤡」◣/n/n_「الي يشوفهم مناسبين لبعض زيي يضغط يب 🤡」◣`
             let menst = [orang, jodoh]
             let buttons = [
-                        { buttonId: '❤️', buttonText: { displayText: '❤️' }, type: 1 }
+                        { buttonId: '「 يب هم مناسبين لبعض😂🤡」◣', buttonText: { displayText: '「 يب هم مناسبين لبعض😂🤡」◣' }, type: 1 }
                     ]
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: menst})
             }
@@ -1246,31 +1246,31 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
 					GojoMdNx.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
 				     break
                     case 'stupid':
-      case 'foolish':
-      case 'smart':
-      case 'idiot':
-      case 'gay':
-      case 'lesbi':
-      case 'bastard':
-      case 'stubble':
-      case 'dog':
-      case 'fuck':
-      case 'ape':
-      case 'noob':
-      case 'great':
-      case 'horny':
-      case 'wibu':
-      case 'asshole':
-      case 'handsome':
-      case 'beautiful':
-      case 'cute':
-      case 'kind':
-      case 'ugly':
-      case 'pretty':
-      case 'lesbian':
-      case 'randi':
-      case 'gandu':
-      case 'madarchod':
+      case 'غبي':
+      case 'حمار':
+      case 'ذكي':
+      case 'منحرف':
+      case 'محبوب':
+      case 'كلب':
+      case 'احمق':
+      case 'قرد':
+      case 'كريه':
+      case 'مكروه':
+      case 'خروف':
+      case 'سافل':
+      case 'ورع':
+      case 'مخادع':
+      case 'مظلوم':
+      case 'مسكين':
+      case 'مخدوع':
+      case 'جميل':
+      case 'طيب':
+      case 'محترم':
+      case 'زفت':
+      case 'وصخ':
+      case 'حزين':
+      case 'مجنون':
+      case 'بشع':
       case 'kala':
       case 'gora':
       case 'chutiya':
@@ -1305,10 +1305,10 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `The Most *${command}* Here Is @${jodoh.split('@')[0]}`
+            let jawab = `「اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]} 」◣/n/n_「لا تأخذونها جد الله يهديكم 🥲」◣`
             let ments = [me, jodoh]
             let buttons = [
-                        { buttonId: '👀', buttonText: { displayText: '👀😂' }, type: 1 }
+                        { buttonId: '「اتفق😂」◣', buttonText: { displayText: '「اتفق😂」◣' }, type: 1 }
                     ]
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
             }
@@ -1456,7 +1456,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 if (!isAdmins) return replay(`${mess.admin}`)
 let teks = `「المنشن الجماعي」◣
  
- ➲ *Message : ${q ? q : 'no message'}*\n\n`
+ ➲ * ${q ? q : 'اصحو من النوم'}*\n\n`
                 for (let mem of participants) {
                 teks += `👤 @${mem.id.split('@')[0]}\n`
                 }
@@ -2066,8 +2066,7 @@ break
                 ]
                 let buttonMessage = {
                     image: { url: images },
-                    caption: `*-------「 صورة 」-------*
-「 البحث」◣ : ${text}`,
+                    caption: `*----「 صورة 」----*`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2091,7 +2090,7 @@ break
 : ${anu.title}
 「 مدة المقطع 」◣ : ${anu.timestamp}
 「 عدد المشاهدات 」◣: ${anu.views}
-「 تم تحميله」◣ : ${anu.ago}
+「 تم تحميله 」◣ : ${anu.ago}
 「 الوصف」◣ : ${anu.description}`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
@@ -2106,17 +2105,17 @@ break
                 let quality = args[1] ? args[1] : '320kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '320kbps'}`, m)
+                GojoMdNx.sendImage(m.chat, media.thumb, `「 العنوان 」◣ : ${media.title}\n「 حجم الملف 」◣`, m)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
             case 'ytmp4': case 'getvideo': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`)
-                let quality = args[1] ? args[1] : '360p'
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 720p`)
+                let quality = args[1] ? args[1] : '720p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '360p'}` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { video: {ّ` }, { quoted: m })
             }
             break
 	    case 'getmusicxxx': {
