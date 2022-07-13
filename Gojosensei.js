@@ -1453,20 +1453,20 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 reply(mess.success)
                 }
                 break
-	case 'tagall': case `منشن`: {
+	case 'المنشن': case `منشن`: {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
 let teks = `「المنشن الجماعي」◣
  
- ➲ * ${q ? q : 'اصحو من النوم'}*\n\n`
+ ➲*${q ? q : 'اصحو من النوم'}*\n\n`
                 for (let mem of participants) {
                 teks += `👤 @${mem.id.split('@')[0]}\n`
                 }
                 GojoMdNx.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
                 break
-                case 'hidetag': {
+	case 'منشن مخفي': case `المنشن المخفي` : {
             if (!m.isGroup) return replay(`${mess.group}`)
             if (!isBotAdmins) return replay(`${mess.botAdmin}`)
             if (!isAdmins) return replay(`${mess.admin}`)
@@ -1726,7 +1726,7 @@ break
                 }
              }
              break
-            case 'linkgroup': case 'linkgc': case 'gclink': case 'grouplink': {
+            case 'رابط الجروب': case 'linkgc': case 'gclink': case 'grouplink': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 let response = await GojoMdNx.groupInviteCode(m.chat)
                 GojoMdNx.sendText(m.chat, `https://chat.whatsapp.com/${response}\n\n${groupMetadata.subject} Group Link`, m, { detectLink: true })
@@ -1744,7 +1744,7 @@ break
                 }
             }
             break
-            case 'delete': case 'del': {
+            case 'حذف': case 'del': {
                 if (!m.quoted) reply(false)
                 let { chat, fromMe, id, isBaileys } = m.quoted
                 if (!isBaileys) return replay(`The Message Was Not Sent By A Bot!`)
@@ -3362,7 +3362,7 @@ typemenu = 'catalog'
 reply("Success Changing Menu To "+q)
 }
                     break
-                     case 'الاواملر': case 'اوامر':{
+                     case 'الاوامر': case 'اوامر':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -3476,7 +3476,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `「 مرحبا👋🏻 」◣`,
-                    description: `「 اختر قائمة من فضلك 」◣\n\n`,
+                    description: `「 اختر قائمة من فضلك 」◣`,
                     buttonText: "「 القائمة 」◣",
                     footerText: `「 تحت الصيانة ⚙️」◣`,
                     listType: "SINGLE_SELECT",
