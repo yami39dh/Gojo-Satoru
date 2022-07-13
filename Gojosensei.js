@@ -1925,7 +1925,7 @@ break
 		}
 	    }
 	    break
-            case 'toimage': case 'toimg': {
+            case 'لصورة': case 'الى صولاة': {
                 if (!quoted) return reply(`Reply Image`)
                 if (!/webp/.test(mime)) reply(`Reply Sticker With Caption *${prefix + command}*`)
                 reply(mess.wait)
@@ -1940,7 +1940,7 @@ break
                 })
             }
             break
-	        case 'tomp4': case 'tovideo': {
+	        case 'الى فيديو': case 'لفيديو': {
                 if (!quoted) reply(`Reply Image`)
                 if (!/webp/.test(mime)) return replay(`Reply Sticker With Caption *${prefix + command}*`)
                 reply(mess.wait)
@@ -1951,7 +1951,7 @@ break
                 await fs.unlinkSync(media)
             }
             break
-            case 'toaud': case 'toaudio': {
+            case 'الى صوتية': case 'لصوتية': {
             if (!/video/.test(mime) && !/audio/.test(mime)) return replay(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
             if (!quoted) return reply(`Send/Reply Video/Audio You Want To Convert To Audio With Caption ${prefix + command}`)
             reply(mess.wait)
@@ -1961,7 +1961,7 @@ break
             GojoMdNx.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
             }
             break
-            case 'tomp3': {
+            case 'الى مقطع صوتي': {
             if (/document/.test(mime)) return reply(`Send/Reply Video/Audio You Want to Convert Into MP3 With Caption ${prefix + command}`)
             if (!/video/.test(mime) && !/audio/.test(mime)) return replay(`Send/Reply Video/Audio You Want To Convert into MP3 With Caption ${prefix + command}`)
             if (!quoted) return replay(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
@@ -1982,7 +1982,7 @@ break
             GojoMdNx.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
             }
             break
-            case 'togif': {
+            case 'لصورة متحركة': {
                 if (!quoted) return reply(`Reply Image`)
                 if (!/webp/.test(mime)) return reply(`Reply Sticker With Caption *${prefix + command}*`)
                 reply(mess.wait)
@@ -2118,7 +2118,7 @@ break
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: ` ${media.title}\n: ${media.filesizeF}\n: ${isUrl(text)}\nMP3\nResolution : ${args[1] || '360p'}` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4',.`${media.title}.mp4`, caption: ` ${media.title}\n: ${media.filesizeF}\n: ${isUrl(text)}\nMP3\n : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
 	    case 'getmusicxxx': {
@@ -3485,7 +3485,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"rows": [
 									{
 										"title": "القائمة الأساسية",
-										"description": "...",
+										"description": ".1.",
 										"rowId": `${prefix}mainmenu`
 									}
 								]
@@ -3495,77 +3495,77 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"rows": [
 									{
 										"title": "القائمة الرئيسية",
-										"description": "...",
+										"description": ".2.",
 										"rowId": `${prefix}allmenu`
 									},
 									{
 										"title": "قائمة المالك",
-										"description": "...",
-										"rowId": `${prefix}المالك`
+										"description": ".3.",
+										"rowId": `${prefix}ownermenu`
 										},
 									{
-										"title": "Group Menu",
-										"description": "Displays The List Of Main Features",
+										"title": "قائمة الجروب",
+										"description": ".4.",
 										"rowId": `${prefix}groupmenu`
 										},
 									{
-										"title": "Rpg Menu",
-										"description": "Displays The List Of Rpg Features",
+										"title": "قائمة المغامرات",
+										"description": ".5.",
 										"rowId": `${prefix}rpgmenu`
 									},
 									{
-										"title": "Download Menu",
-										"description": "Displays The List Of Download Features",
+										"title": "قائمة التنزيلات",
+										"description": ".6.",
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": "Search Menu",
-										"description": "Displays The List Of Searching Features",
+										"title": "قائمة البحث",
+										"description": ".7.",
 										"rowId": `${prefix}searchmenu`
 									},
 									{
-											"title": "Random Menu",
-										"description": "Displays The List Of Random Features",
+											"title": "قائمة عشوائية",
+										"description": ".8.",
 										"rowId": `${prefix}randommenu`
 										},
 										{
-											"title": "Random Anime Menu",
-										"description": "Displays The List Of Random Anime Features",
+											"title": "قائمة الأنميات",
+										"description": ".9.",
 										"rowId": `${prefix}randomanimemenu`
 										},
 										{
-											"title": "Fun Menu",
-										"description": "Displays The List Of Fun Features",
+											"title": "قائمة التسلية",
+										"description": ".10.",
 										"rowId": `${prefix}funmenu`
 										},
 										{
-											"title": "Convert Menu",
-										"description": "Displays The List Of Convert Features",
+											"title": "قائمة التحويلات",
+										"description": ".11.",
 										"rowId": `${prefix}convertmenu`
 										},
 										{
-											"title": "Database Menu",
-										"description": "Displays The List Of Database Features",
+											"title": "قائمة البيانات",
+										"description": ".12.",
 										"rowId": `${prefix}databasemenu`
 										},
 										{
-											"title": "Voice Changer Menu",
-										"description": "Displays The List Of Voice Changing Features",
+											"title": "قائمة مغير الاصوات",
+										"description": ".13.",
 										"rowId": `${prefix}voicechangermenu`
 										},
 										{
-											"title": "TXT-to-IMG Menu",
-										"description": "Displays The List Of Textpro Features",
+											"title": "قائمة تحويل كتابة الى صورة",
+										"description": ".14.",
 										"rowId": `${prefix}textpromenu`
 										},
 										{
-											"title": "Islamic Menu",
-										"description": "Displays The List Of Islamic Features",
+											"title": "قائمة القرآن الكريم",
+										"description": ".15.",
 										"rowId": `${prefix}islamicmenu`
 										},
 										{
-											"title": "Horoscope Menu",
-										"description": "Displays The List Of Horoscope Features",
+											"title": "قائمة الأبراج",
+										"description": ".16.",
 										"rowId": `${prefix}horoscopemenu`
 										}
 								]
@@ -3574,8 +3574,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Chat With Fellow Users",
 								"rows": [
 									{
-										"title": "Anonymous Chat Menu",
-										"description": "Displays The List Of Anonymous Chat Features",
+										"title": "قائمة الشات المجهول",
+										"description": ".17.",
 										"rowId": `${prefix}anonymouschatmenu`
 									}
 								]
@@ -3584,8 +3584,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Credit",
 								"rows": [
 									{
-										"title": "Thanks To",
-										"description": "Displays The List Of Credit Of The Bot !!",
+										"title": "نبذة عن المالك",
+										"description": ".18.",
 										"rowId": `${prefix}tqtt`
 									}
 								]
