@@ -3362,7 +3362,7 @@ typemenu = 'catalog'
 reply("Success Changing Menu To "+q)
 }
                     break
-                     case 'alive': case 'bot':{
+                     case 'الاواملر': case 'اوامر':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -3371,7 +3371,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         hydratedTemplate: {
                             hydratedContentText: anu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')},
+                            jpegThumbnail: fs.readFileSync('./GojoMedia/ko.jpg')},
                             hydratedFooterText: `┌─❖
 ┌─❖ مـرحبـاً 🤗 」
 └┬❖ 「 ${pushname} 」
@@ -3481,11 +3481,11 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     footerText: `${global.footer}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "Main Features",
+								"title": "قائمة الخيارات",
 								"rows": [
 									{
-										"title": "Main Menu",
-										"description": "Displays The List Of Main Features",
+										"title" "القائمة الاساسية",
+										"description": "...",
 										"rowId": `${prefix}mainmenu`
 									}
 								]
@@ -3494,14 +3494,14 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Bot Features",
 								"rows": [
 									{
-										"title": "All Menu",
-										"description": "Displays The List Of All The Features!",
+										"title": "القائمة الرئيسية",
+										"description": "...",
 										"rowId": `${prefix}allmenu`
 									},
 									{
-										"title": "Owner Menu",
-										"description": "Displays The List Of Owner Features",
-										"rowId": `${prefix}ownermenu`
+										"title": "قائمة المالك",
+										"description": "...",
+										"rowId": `${prefix}المالك`
 										},
 									{
 										"title": "Group Menu",
