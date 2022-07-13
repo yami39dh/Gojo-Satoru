@@ -22,27 +22,27 @@ global.APIKeys = {
 global.owner = ['96891103640']
 global.premium = ['96891103640']
 global.ownernomer = '96891103640'
-global.ownername = '♛ AyAto ♛'
-global.botname = '♛ GoJo BoT ♛'
-global.footer = '♛ GoJo BoT ♛'
+global.ownername = '♛ الامبراطور اياتو ♛'
+global.botname = '♛ غوجو بوت ♛'
+global.footer = '♛ غوجو بوت ♛'
 global.ig = 'https://github.com/nexusNw'
 global.region = 'India, South India, Kerala'
-global.sc = 'https://chat.whatsapp.com/DXyUbHeacdM7rHIDXWiBpA'
+global.sc = 'https://chat.whatsapp.com/KodtgrEaF0O1vSqw0e1k09'
 global.myweb = 'https://youtube.com/channel/UCPvrnWknQrgCSIeobXMP0Uw'
 global.packname = 'https://Wa.Me/+96891103640'
-global.author = '♛ GoJo BoT ♛'
+global.author = '♛ غوجو بوت ♛'
 global.sessionName = 'session'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
     success: '✓',
-    admin: '*「هـذا الامـر فـقـط لـ المـشـرفـيـن」◣*',
-    botAdmin: '*「اعـطـنـي إشـراف لـتـفـعـيـل  الامـر」◣*',
-    owner: '*「هـذا الامـر فـقـط لـ الـمـالـك」◣*',
-    group: '*「هـذا الامـر فـي الـمـجـمـوعـات فـقـط」◣*',
-    private: '*「هـذا الامـر فـي الـخـاص فـقـط」◣*',
-    bot: '*「هـذا الامـر مـخـصـص لـ الـبـوت」◣*',
-    wait: '*「انـتـظـر مـن فـضـلـك」◣*',
+    admin: '*「 هـذا الامـر فـقـط لـ المـشـرفـيـن 」◣*',
+    botAdmin: '*「 اعـطـنـي إشـراف لـتـفـعـيـل  الامـر 」◣*',
+    owner: '*「 هـذا الامـر فـقـط لـ الـمـالـك 」◣*',
+    group: '*「 هـذا الامـر فـي الـمـجـمـوعـات فـقـط 」◣*',
+    private: '*「 هـذا الامـر فـي الـخـاص فـقـط 」◣*',
+    bot: '*「 هـذا الامـر مـخـصـص لـ الـبـوت 」◣*',
+    wait: '*「 انـتـظـر مـن فـضـلـك 」◣*',
     error: 'Error! Maybe Api Key Is Expired🤔!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 1000 Hours',
 }
