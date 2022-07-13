@@ -3362,7 +3362,7 @@ typemenu = 'catalog'
 reply("Success Changing Menu To "+q)
 }
                     break
-                     case 'الاوامر': case 'اوامر':{
+                     case '4868648646': case '8796879':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -3417,7 +3417,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
 break
-            case 'list': case 'menu': {
+            case '90990919191': case '909091919': {
             	timestampe = speed();
 latensie = speed() - timestampe
                 anu = ``
@@ -3472,10 +3472,12 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
                 break
-                case 'command': {
+	case 'الاوامر': case 'اوامر': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `「 مرحبا👋🏻 」◣`,
+                    title: `「 مرحبا👋🏻  」◣
+		    「 معك بوت غوجو ساتورو 🤗 」◣
+		    「 من مملكة غولد 🏮」◣`,
                     description: `「 اختر قائمة من فضلك 」◣`,
                     buttonText: "「 القائمة 」◣",
                     footerText: `「 تحت الصيانة ⚙️」◣`,
@@ -3484,9 +3486,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "قائمة الخيارات",
 								"rows": [
 									{
-										"title": "القائمة الأساسية",
+										"title": "قسم القائمة",
 										"description": ".1.",
-										"rowId": `${prefix}mainmenu`
+										"rowId": `${prefix}mai`
 									}
 								]
 							},
@@ -3494,9 +3496,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Bot Features",
 								"rows": [
 									{
-										"title": "القائمة الرئيسية",
+										"title": "القائمة الأساسية",
 										"description": ".2.",
-										"rowId": `${prefix}allmenu`
+										"rowId": `${prefix}mainmenu`
 									},
 									{
 										"title": "قائمة المالك",
@@ -3509,7 +3511,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}groupmenu`
 										},
 									{
-										"title": "قائمة المغامرات",
+										"title": "قائمة الالعاب",
 										"description": ".5.",
 										"rowId": `${prefix}rpgmenu`
 									},
@@ -3524,12 +3526,12 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}searchmenu`
 									},
 									{
-											"title": "قائمة عشوائية",
+											"title": "قائمة صور انميات",
 										"description": ".8.",
 										"rowId": `${prefix}randommenu`
 										},
 										{
-											"title": "قائمة الأنميات",
+											"title": "قائمة ملصقات انميات",
 										"description": ".9.",
 										"rowId": `${prefix}randomanimemenu`
 										},
@@ -3605,7 +3607,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 reply(`GitHub : https://github.com/nexusNw/Gojo-Satoru\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
             }
             break
-case 'allmenu': {
+case '9807786789678': {
   	anu = `
 ┏━「 *${botname}* 」━━⭓ 
 ┃╔══☯︎「 MAIN 」☯︎
