@@ -3990,7 +3990,7 @@ var unicorn = await getBuffer(picak+'.9.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔✪「 ملصقات الانمي 」	        
-┃╠سعيد |happy
+┃╠سعيد | happy
 ┃╠حزين| cry
 ┃╠تربيت | pat
 ┃╠حضن | hug
