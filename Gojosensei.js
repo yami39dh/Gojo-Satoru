@@ -3088,41 +3088,41 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
                 reply('Done!')
             }
             break
-            case 'addmsg': {
-                if (!m.quoted) return reply(`Reply Message You Want To Save In Database`)
+            case 'اضافة.رسالة': {
+                if (!m.quoted) return reply(`*「 اكتب مالذي تريد ان تضيفه ف قائمة الرسائل 」◣*`)
                 if (!text) return reply(`Example : ${prefix + command} File Name`)
                 let msgs = global.db.data.database
-                if (text.toLowerCase() in msgs) return reply(`'${text}' Has Been Registered In The Message List`)
+                if (text.toLowerCase() in msgs) return reply(`'${text}'*「 هذه الرسالة موجودة بالفعل ف القائمة 」◣*`)
                 msgs[text.toLowerCase()] = quoted.fakeObj
-reply(`Successfully Added Message In Message List As '${text}'
+reply(`*「 تم اضافة الرسالة」◣*'${text}'
     
-Access With ${prefix}getmsg ${text}
+「 الرمز ${text} 」◣
 
-View List Of Messages With ${prefix}listmsg`)
+*「 اكتب *قائمة.الرسائل* لكي ترى الرسائل التي اضفتها 」◣*`)
             }
             break
-            case 'getmsg': {
+            case 'حصلت.رسالة': {
                 if (!text) return reply(`Example : ${prefix + command} file name\n\nView Message List With ${prefix}listmsg`)
                 let msgs = global.db.data.database
                 if (!(text.toLowerCase() in msgs)) return reply(`'${text}' Not Listed In The Message List`)
                 GojoMdNx.copyNForward(m.chat, msgs[text.toLowerCase()], true)
             }
             break
-            case 'listmsg': {
+            case 'قائمة.الرسائل': {
                 let msgs = JSON.parse(fs.readFileSync('./database/database.json'))
 	        let seplit = Object.entries(global.db.data.database).map(([nama, isi]) => { return { nama, ...isi } })
-		let teks = '「 DATABASE LIST 」\n\n'
+		let teks = '「 قائمة الرسائل 」\n\n'
 		for (let i of seplit) {
-		    teks += `💫 *Name :* ${i.nama}\n💫 *Type :* ${getContentType(i.message).replace(/Message/i, '')}\n────────────────────────\n\n`
+		    teks += `💫 *الرمز:* ${i.nama}\n💫 *النوع:* ${getContentType(i.message).replace(/Message/i, '')}\n────────────────────────\n\n`
 	        }
 	        reply(teks)
 	    }
 	    break
-            case 'delmsg': case 'deletemsg': {
+            case 'حذف.الرسالة': case 'deletemsg': {
 	        let msgs = global.db.data.database
-	        if (!(text.toLowerCase() in msgs)) return reply(`'${text}' Not Listed In The Message List`)
+	        if (!(text.toLowerCase() in msgs)) return reply(`*「 هذا الامر غير موجود ف القائمة 」◣*`)
 		delete msgs[text.toLowerCase()]
-		reply(`Delete Successfully '${text}' From The Message list`)
+		reply(`*「 تم حذف الامر '${text}' من قائمة الرسائل 」◣*`)
             }
 	    break
 	    case 'anonymous': {
@@ -3237,16 +3237,16 @@ View List Of Messages With ${prefix}listmsg`)
                 }
                 break
             }
-            case 'public': {
+            case 'عام': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 GojoMdNx.public = true
-                reply('Successful Change To Public Usage')
+                reply('*「 تم 」◣*')
             }
             break
-            case 'self': {
+            case 'خاص': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 GojoMdNx.public = false
-                reply('Successful Change To Self Usage')
+                reply('*「 تم 」◣*')
             }
             break
             case 'ping': case 'botstatus': case 'statusbot': {
@@ -3867,10 +3867,12 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╔═✪「 المجموعات 」	        
 ┃╠المنشن
 ┃╠المنشن.المخفي
+┃╠المتصلين
 ┃╠الرابط
-┃╠
-┃╠
-┃╠
+┃╠اضافة
+┃╠ترقية 
+┃╠تخفيض
+┃╠طرد
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -3885,6 +3887,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╠الكتابة | كت
 ┃╠الكتابة | كتت
 ┃╠الكتابة | كتتت
+┃╠بوت اعمل فعالية المارد
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -3942,7 +3945,11 @@ var unicorn = await getBuffer(picak+'.3.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═✪「 المالك 」	        
-┃╠
+┃╠انضم
+┃╠غادر
+┃╠حطها.خلفيتك
+┃╠عام
+┃╠خاص
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -3960,7 +3967,8 @@ var unicorn = await getBuffer(picak+'.7.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 البحث 」	        
-┃╠
+┃╠صورة
+┃╠فيديو
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -3969,7 +3977,8 @@ var unicorn = await getBuffer(picak+'.8.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 صور الانمي 」	        
-┃╠
+┃╠لولي
+┃╠وايفو
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -3978,6 +3987,20 @@ var unicorn = await getBuffer(picak+'.9.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔✪「 ملصقات الانمي 」	        
+┃╠
+┃╠
+┃╠
+┃╠
+┃╠
+┃╠
+┃╠
+┃╠
+┃╠
+┃╠
+┃╠
+┃╠
+┃╠
+┃╠
 ┃╠
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
@@ -4005,7 +4028,9 @@ var unicorn = await getBuffer(picak+'.12.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═══✪「 البيانات 」	        
-┃╠
+┃╠اضافة.رسالة
+┃╠قائمة.الرسائل
+┃╠حذف.رسالة
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -4014,7 +4039,59 @@ var unicorn = await getBuffer(picak+'.17.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 الاستمارات 」	        
-┃╠
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *1- 『 الاوامر العامة 』*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *「 القوانين 」◣*
+    *「 الترحيب 」◣*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *2- 『 المخالفات 』*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *「 انذار | مخالفة 」◣*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *3- 『 المشرفين 』*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *「 ترقية | تخفيض 」◣*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *4- 『 الاستقبال 』*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *「 استمارة | الاستمارة 」◣*
+    *「 قائمة الالقاب 」◣*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *5- 『 السؤال التفاعلي 』*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *「 سؤال 」◣*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *6- 『 الفعاليات 』*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *「 امونق اس 」◣*
+    *「 فعالية التصاميم 」◣*
+    *「 فعالية الجرس 」◣*
+    *「 فعالية الديث نوت 」◣*
+    *「 فعالية الصور 」◣*
+    *「 فعالية الكراسي 」◣*
+    *「 فعالية الفرق 」◣*
+    *「 فعالية القلوب 」◣*
+    *「 فعالية مين الاسرع 」◣*
+    *「 فعالية المارد 」◣*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *7- 『 المسابقات 』*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *「 مسابقة 」◣*
+    *「 مسابقة القنابل 」◣*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *8- 『 البطاقات 』*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
+    *「 بطاقة تغيير صورة الجروب 」◣*
+    *「 بطاقة تجميع صور 」◣*
+    *「 بطاقة تغيير القب 」◣*
+    *「 بطاقة حذف انذار 」◣*
+    *「 بطاقة سرقة القب 」◣*
+    *「 بطاقة سخرية 」◣*
+    *「 بطاقة طرد 」◣*
+    *「 بطاقة تطهير طرد 」◣*
+    *「 بطاقة مشرف 」◣*
+*❁━─━─━─━─━─『🏮』─━─━─━─━─━❁*
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -4023,7 +4100,7 @@ var unicorn = await getBuffer(picak+'.15.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 القرآن الكريم 」	        
-┃╠
+┃╠القرآن | juzamma pdf
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
