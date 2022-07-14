@@ -3536,7 +3536,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}randomanimemenu`
 										},
 										{
-											"title": "قائمة التسلية",
+											"title": "قائمة السخرية",
 										"description": ".10.",
 										"rowId": `${prefix}funmenu`
 										},
@@ -3896,7 +3896,7 @@ case 'funmenu':
 var unicorn = await getBuffer(picak+'2')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 الضحك 」	        
+┃╔═✪「 السخرية 」	        
 ┃╠ 
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
@@ -3975,7 +3975,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
 case 'anon':
-var unicorn = await getBuffer(picak+'OTAKU GOLD ')
+var unicorn = await getBuffer(picak+'OTAKU GOLD')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 الاستمارات 」	        
