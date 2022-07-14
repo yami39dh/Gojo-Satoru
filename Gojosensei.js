@@ -1632,7 +1632,7 @@ break
             reply('Successfully Deleted The Vote Session In This Group')
 	    }
             break
-               case 'group': case 'جروب': {
+               case 'الجروب': case 'جروب': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1645,7 +1645,7 @@ break
                         { buttonId: 'group open', buttonText: { displayText: 'نعم' }, type: 1 },
                         { buttonId: 'group close', buttonText: { displayText: 'لا' }, type: 1 }
                     ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, `Group Mode`, GojoMdNx.user.name, m)
+                    await GojoMdNx.sendButtonText(m.chat, buttons, `هل ترغب ب اغلاق الجروب؟؟`, GojoMdNx.user.name, m)
 
              }
             }
