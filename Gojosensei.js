@@ -1424,15 +1424,15 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 await GojoMdNx.groupUpdateSubject(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
             }
             break
-          case 'setdesc': case 'تغيير الوصف': {
+          case 'الوصف': case 'تغيير.الوصف': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) replay(`${mess.admin}`)
-                if (!text) replay(`مثال : تغيير الوصف | مرحبا`)
+                if (!text) replay(`مثال : تغيير.الوصف | مرحبا`)
                 await GojoMdNx.groupUpdateDescription(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
             }
             break
-	case 'حطها خلفيتك': case `تغغير خلفية البوت`: {
+	case 'حطها.خلفيتك': case ``: {
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!quoted) return replay(`Send/Reply Image With Caption ${prefix + command}`)
                 if (!/image/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
@@ -1726,7 +1726,7 @@ break
                 }
              }
              break
-            case 'رابط الجروب': case 'linkgc': case 'gclink': case 'grouplink': {
+            case 'الرابط': case 'رابط.الجروب': case 'gclink': case 'grouplink': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 let response = await GojoMdNx.groupInviteCode(m.chat)
                 GojoMdNx.sendText(m.chat, `https://chat.whatsapp.com/${response}\n\n${groupMetadata.subject} Group Link`, m, { detectLink: true })
@@ -1744,20 +1744,20 @@ break
                 }
             }
             break
-            case 'حذف': case 'del': {
+            case 'حذف': case 'احذف': {
                 if (!m.quoted) reply(false)
                 let { chat, fromMe, id, isBaileys } = m.quoted
                 if (!isBaileys) return replay(`The Message Was Not Sent By A Bot!`)
                 GojoMdNx.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
             }
             break
-            case 'bcgc': case 'رسالة للجروبات': {
+            case 'رسالة.جروبات': case 'رسالة.جماعية.الجروبات': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} Nexus Handsome`)
                 let getGroups = await GojoMdNx.groupFetchAllParticipating()
                 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                 let anu = groups.map(v => v.id)
-                reply(`「 سيتم ارسال ${anu.length} جروبات, بعد  ${anu.length * 1.5} ثواني | ثانية 」◣`)
+                reply(`「 انتظر شوي ... 」◣`)
                 for (let i of anu) {
                     await sleep(1500)
                     let btn = [{
@@ -1787,7 +1787,7 @@ break
                 reply(`「 تم  ✌ 」◣`)
             }
             break
-            case 'رسالة للجميع': case 'رسالة للكل': case 'bcall': {
+            case 'رسالة.جماعية': case 'رسالة.جماعية.الكل': case 'bcall': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} Nexus`)
                 let anu = await store.chats.all().map(v => v.id)
@@ -1925,7 +1925,7 @@ break
 		}
 	    }
 	    break
-            case 'لصورة': case 'الى صورة': {
+            case 'لصورة': case 'الىصورة': {
                 if (!quoted) return reply(`Reply Image`)
                 if (!/webp/.test(mime)) reply(`Reply Sticker With Caption *${prefix + command}*`)
                 reply(mess.wait)
@@ -1982,7 +1982,7 @@ break
             GojoMdNx.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
             }
             break
-            case 'لصورة متحركة': {
+            case 'لجيف': {
                 if (!quoted) return reply(`Reply Image`)
                 if (!/webp/.test(mime)) return reply(`Reply Sticker With Caption *${prefix + command}*`)
                 reply(mess.wait)
@@ -2354,7 +2354,7 @@ break
                 GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generated Random ' + command }, { quoted: m })
             }
             break
-	    case 'couplepp':  case 'طقم': {
+	    case 'تطقيم':  case 'طقم': {
                 reply(mess.wait)
                 let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
                 let random = anu[Math.floor(Math.random() * anu.length)]
@@ -2362,7 +2362,7 @@ break
                 GojoMdNx.sendMessage(m.chat, { image: { url: random.female }, caption: `「 بنت 」「👧🏻」◣` }, { quoted: m })
             }
 	    break
-            case 'coffee': case 'kopi': {
+            case 'قهوة': case 'شاي': {
             let buttons = [
                     {buttonId: `coffe`, buttonText: {displayText: '➡️Next Image➡️'}, type: 1}
                 ]
@@ -3335,14 +3335,14 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 GojoMdNx.sendContact(m.chat, global.owner, m)
             }
             break
-case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
+case 'بكاء':case 'قتل':case 'حضن':case 'تربيت':case 'لعق':case 'تقبيل':case 'عض':case 'يرمي':case 'قطة':case 'تنمر':case 'ضرب':case 'غمزة':case 'دفرة':case 'ياكل':case 'صفع':case 'ابتسامة':case 'يرحب':case 'awoo':case 'خجل':case 'متعجرف':case 'كئيب':case 'سعيد':case 'رقص':case 'كرنج':case 'عناق':case 'كفك':case 'shinobu':case 'megumin':case 'اليد':
 					reply(mess.wait)
 					axios.get(`https://api.waifu.pics/sfw/${command}`)
 					.then(({data}) => {
 						GojoMdNx.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
 					})
 					break
-				case 'waifu': case 'loli':
+				case 'زوجة': case 'لولي':
 					reply(mess.wait)
 					axios.get(`https://api.waifu.pics/sfw/waifu`)
 					.then(({data}) => {
@@ -3881,6 +3881,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
+		
 
 case 'rpgmenu':
 var unicorn = await getBuffer(picak+'GAMES')
