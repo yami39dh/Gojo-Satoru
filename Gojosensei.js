@@ -2949,7 +2949,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 		GojoMdNx.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
 		}
 		break
-		case 'juzamma': {
+		case 'القرآن': {
 		if (args[0] === 'pdf') {
 		reply(mess.wait)
 		GojoMdNx.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
@@ -3566,17 +3566,17 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}islamicmenu`
 										},
 										{
-											"title": "قائمة ال كت",
+											"title": "قائمة استمارات مملكة غولد",
 										"description": ".16.",
 										"rowId": `${prefix}horoscopemenu`
 										}
 								]
 							},
 							{
-								"title": "المحادثات",
+								"title": "المملكة",
 								"rows": [
 									{
-										"title": "قائمة الشات المجهول",
+										"title": "قائمة بطاقات مملكة غولد",
 										"description": ".17.",
 										"rowId": `${prefix}anonymouschatmenu`
 									}
@@ -3586,7 +3586,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "نبذة",
 								"rows": [
 									{
-										"title": "نبذة عن المالك",
+										"title": "تاريخ مملكة غولد",
 										"description": ".18.",
 										"rowId": `${prefix}tqtt`
 									}
@@ -3600,10 +3600,10 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
     case 'donasi': case 'donate': case 'sewabot': case 'sewa': {
-                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c15f725add0381fb69c4b.jpg' }, caption: `*Hi Bro ${m.pushName}*\nDonation section is currently down🥲 , I know you are happy but me 🥲💔\n` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c15f725add0381fb69c4b.jpg' }, caption: `تم الاستلام` }, { quoted: m })
             }
             break
-            case 'sc': case 'script': {
+            case 'التسجhgjيل': case 'رابطgh الاستقبال': {
                 reply(`GitHub : https://github.com/nexusNw/Gojo-Satoru\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
             }
             break
@@ -3866,7 +3866,8 @@ var unicorn = await getBuffer(picak+'Main Menu')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═✪「 القائمة 」
-┃╠
+┃╠اوامر
+┃╠الاوامر
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -4021,11 +4022,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 break
 case 'thanksto': case 'tqto': case 'tqtt':
 var unicorn = await getBuffer(picak+'Developer')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-Thanks to Me ( NexusNw)
-Alien-Alfa (For helping me to deploy qr in replit and answered my every doubts regard this project)
-DGXeon ( 45% Credits goes to him ,in this script)
-And Again Me (King Nexus 🎉) 🐦 Who Helped Assemble This Sexy Script !!!`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
+await GojoMdNx.send5ButImg(from, `` + '' + ' ', `مملكة غولد كانت تضم حوالي 50 نقابة كانت من افضل الممالك قديما بقيادة الامبراطور توشيرو والنائب ساتومي من نأحية التحديات والمسابقات كانت المملكة من الاوائل وقتها لكن في مرة من الايام تعطل هاتف الامبراطور توشيرو واختفى حوالي سنتين وعندما عاد  اختفت المملكة وكل شيء  والان هو يحاول ان يحيئ مملكته من البداية التي لاتضم اي نقابة حاليا وخطوته الاولى كانت بأن يعمل بوت وهو انا كيف تشوفوني ؟ ههه مو مشكلة المهم توشيرو  يقول اذا بدكم تنضمون معنا اضغطو ع زر رابط الاستقبال`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
             default:
                 if (budy.startsWith('=>')) {
