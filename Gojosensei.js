@@ -1851,7 +1851,7 @@ break
                     GojoMdNx.sendText(m.chat, '「 الموجودين الأن 」◣\n\n' + online.map(v => '👤 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
              }
              break
-            case 'sticker': case 's': case 'stickergif': case 'sgif': {
+            case 'ملصق': case 's': case 'ستيكر': case 'س': {
             if (!quoted) return replay(`Reply Video/Image With Caption ${prefix + command}`)
             reply(mess.wait)
                     if (/image/.test(mime)) {
@@ -3098,7 +3098,7 @@ reply(`*「 تم اضافة الرسالة」◣*'${text}'
     
 「 الرمز ${text} 」◣
 
-*「 اكتب *قائمة.الرسائل* لكي ترى الرسائل التي اضفتها 」◣*`)
+「 اكتب *قائمة.الرسائل* لكي ترى الرسائل التي اضفتها 」◣`)
             }
             break
             case 'حصلت.رسالة': {
@@ -4028,7 +4028,7 @@ var unicorn = await getBuffer(picak+'.11.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 التحويلات 」	        
-┃╠ملصق |sticker/s
+┃╠ملصق |ستيكر | س
 ┃╠لصورة
 ┃╠لفيديو
 ┃╠لمقطع.صوتي
