@@ -2348,11 +2348,11 @@ break
 	    break
             case 'قهوة': case 'شاي': {
             let buttons = [
-                    {buttonId: `coffe`, buttonText: {displayText: '➡️Next Image➡️'}, type: 1}
+                    {buttonId: `شاي`, buttonText: {displayText: '➡️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
-                    caption: `☕ Random Coffee`,
+                    caption: `☕`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -4138,7 +4138,7 @@ var unicorn = await getBuffer(picak+'.16.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 الأضافات 」	        
-┃╠تحت الصيانة.
+┃╠شاي | قهوة
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
