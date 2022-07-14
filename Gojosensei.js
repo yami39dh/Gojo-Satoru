@@ -2931,7 +2931,7 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 		GojoMdNx.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
 		}
 		break
-		case 'القرآن': {
+		case 'juzamma': {
 		if (args[0] === 'pdf') {
 		reply(mess.wait)
 		GojoMdNx.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
@@ -3884,6 +3884,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓
 ┃╔═✪「 الألعاب 」	        
 ┃╠الاكس او | ttt
+┃╠حذف الاكس او | delttt
 ┃╠الكتابة | كت
 ┃╠الكتابة | كتت
 ┃╠الكتابة | كتتت
@@ -3958,7 +3959,8 @@ var unicorn = await getBuffer(picak+'.6.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═✪「 التنزيلات 」	        
-┃╠
+┃╠رابط فيديو | ytmp4
+┃╠رابط صوتية | ytmp3
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -3977,6 +3979,7 @@ var unicorn = await getBuffer(picak+'.8.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 صور الانمي 」	        
+┃╠تطقيم |طقم
 ┃╠لولي
 ┃╠وايفو
 ┃╚═════════════✪
@@ -4019,7 +4022,12 @@ var unicorn = await getBuffer(picak+'.11.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 التحويلات 」	        
-┃╠ 
+┃╠ملصق |sticker/s
+┃╠لصورة
+┃╠لفيديو
+┃╠لمقطع.صوتي
+┃╠لصوتية
+┃╠لجيف
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -4109,7 +4117,9 @@ var unicorn = await getBuffer(picak+'.13.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 مغير الاصوات 」	        
-┃╠
+┃╠سريع | fast
+┃╠بطيء | slow
+┃╠سمين | fat
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -4118,7 +4128,7 @@ var unicorn = await getBuffer(picak+'.16.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔══✪「 الأضافات 」	        
-┃╠
+┃╠تحت الصيانة.
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
