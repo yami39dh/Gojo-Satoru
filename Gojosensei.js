@@ -1751,74 +1751,74 @@ break
                 GojoMdNx.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
             }
             break
-            case 'bcgc': case 'bcgroup': {
+            case 'bcgc': case 'رسالة للجروبات': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} Nexus Handsome`)
                 let getGroups = await GojoMdNx.groupFetchAllParticipating()
                 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                 let anu = groups.map(v => v.id)
-                reply(`Sent Broadcast To ${anu.length} Group Chat, Finish Time ${anu.length * 1.5} Seconds`)
+                reply(`「 سيتم ارسال ${anu.length} جروبات, بعد  ${anu.length * 1.5} ثواني | ثانية 」◣`)
                 for (let i of anu) {
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Script🔖',
+                                    displayText: '「 رابط الاستقبال 」「📌」◣',
                                     url: `${sc}`
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: '「 قناتي 」「📍」◣',
                                     url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '🎀Menu🎀',
-                                    id: 'menu'
+                                    displayText: '「 القائمة 」「🗒️」◣',
+                                    id: 'اوامر'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '👤Owner👤',
+                                    displayText: '「 المالك 」「👤」◣',
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 GOJO-SATORU HERE🎉 」\n\n${text}`
+                      let txt = `「 غوجو ساتورو موجود 🎉 」\n\n${text}`
                       GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb, btn)
                     }
-                reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
+                reply(`「 تم  ✌ 」◣`)
             }
             break
-            case 'bc': case 'broadcast': case 'bcall': {
+            case 'رسالة للجميع': case 'رسالة للكل': case 'bcall': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} Nexus`)
                 let anu = await store.chats.all().map(v => v.id)
-                reply(`Send Broadcast To ${anu.length} Chat\nFinish Time ${anu.length * 1.5} Seconds`)
+                reply(`「 سيتم الأرسال بعد قليل ..」◣`)
 		for (let yoi of anu) {
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'Script🔖',
+                                    displayText: '「 رابط الاستقبال 」「📌」◣',
                                     url: `${sc}`
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: 'YouTube📍',
+                                    displayText: '「 قناتي 」「📍」◣', 
                                     url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '🎀Menu🎀',
-                                    id: 'menu'
+                                    displayText: '「 القائمة 」「🗒️」◣',
+                                    id: 'الاوامر'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '👤Owner👤',
+                                    displayText: '「 المالك 」「👤」◣',
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 GOJO-SATORU HERE 🎉」\n\n${text}`
+                      let txt = `「 غوجو ساتورو موجود 🎉」\n\n${text}`
                       GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb, btn)
 		}
-		reply('Broadcast Success')
+		reply('「 تم 🤗 」◣')
             }
             break
             case 'chatinfo': case 'infochat': {
