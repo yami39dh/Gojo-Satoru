@@ -3486,7 +3486,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "قائمة الخيارات",
 								"rows": [
 									{
-										"title": "بوت غوجو",
+										"title": "المقدمة",
 										"description": ".1.",
 										"rowId": `${prefix}mai`
 									}
@@ -3496,7 +3496,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "قسم القائمة",
 								"rows": [
 									{
-										"title": "القائمة الأساسية",
+										"title": "القائمة",
 										"description": ".2.",
 										"rowId": `${prefix}mainmenu`
 									},
@@ -3561,12 +3561,12 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"rowId": `${prefix}textpromenu`
 										},
 										{
-											"title": "قائمة القرآن الكريم",
+											"title": "قائمة القرآن",
 										"description": ".15.",
 										"rowId": `${prefix}islamicmenu`
 										},
 										{
-											"title": "قائمة استمارات مملكة غولد",
+											"title": "قائمة اضافية",
 										"description": ".16.",
 										"rowId": `${prefix}horoscopemenu`
 										}
@@ -3576,9 +3576,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "المملكة",
 								"rows": [
 									{
-										"title": "قائمة بطاقات مملكة غولد",
+										"title": "قائمة استمارات مملكة غولد",
 										"description": ".17.",
-										"rowId": `${prefix}anonymouschatmenu`
+										"rowId": `${prefix}anon`
 									}
 								]
 							},
@@ -3974,11 +3974,11 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
-case 'databasemenu':
-var unicorn = await getBuffer(picak+'Database Menu')
+case 'anon':
+var unicorn = await getBuffer(picak+'الاستمارات')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 الشات 」	        
+┃╔══✪「 الاستمارات 」	        
 ┃╠
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
