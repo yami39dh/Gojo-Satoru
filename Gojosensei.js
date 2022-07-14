@@ -3990,21 +3990,27 @@ var unicorn = await getBuffer(picak+'.9.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔✪「 ملصقات الانمي 」	        
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
-┃╠
+┃╠سعيد |happy
+┃╠حزين| cry
+┃╠تربيت | pat
+┃╠حضن | hug
+┃╠كرنج | cringe
+┃╠اليد | handhold
+┃╠عناق | cuddle
+┃╠كئيب | glomp
+┃╠متعجرف | smug
+┃╠صفع | slap
+┃╠قتل | kill
+┃╠خجل | blush
+┃╠ابتسامة | smile
+┃╠يأكل | nom
+┃╠عض | bite
+┃╠يلوح بيده | wave
+┃╠غمزة | wink
+┃╠ضرب | bonk
+┃╠لعق | lick
+┃╠تنمر | bully
+┃╠تقبيل | kiss
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
@@ -4013,7 +4019,7 @@ var unicorn = await getBuffer(picak+'.14.')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═✪「 الزخرفة 」	        
-┃╠ 
+┃╠زخرفة  انقلش | styletext
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
