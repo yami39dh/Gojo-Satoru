@@ -3893,7 +3893,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 break
 
 case 'funmenu':
-var unicorn = await getBuffer(picak+'FUN')
+var unicorn = await getBuffer(picak+'2')
 await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═✪「 الضحك 」	        
