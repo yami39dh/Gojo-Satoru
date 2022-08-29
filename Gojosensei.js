@@ -3460,9 +3460,12 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 	case 'الاوامر': case 'اوامر': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `「 مرحبا👋🏻  」◣
+                    title: `「 مرحبا 👋🏻  」◣
 		    「 معك بوت غوجو 🤗 」◣
-		    「 من مملكة غولد 🏮」◣`,
+		    「 افضل بوت عربي 」◣
+ 「 رابط فرع التعليم على البوت」◣
+		    「https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3」◣
+		    「 الي محتاج شروحات ينضم 」◣`,
                     description: `「 اختر قائمة من فضلك 」◣`,
                     buttonText: "「 القائمة 」◣",
                     footerText: `「 تحت الصيانة ⚙️」◣`,
