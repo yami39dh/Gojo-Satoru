@@ -3590,16 +3590,15 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
     case 'donasi': case 'donate': case 'sewabot': case 'sewa': {
                 GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c15f725add0381fb69c4b.jpg' }, caption: `` }, { quoted: m })
             }
-            break
-            case 'التسجhgjيل': case 'التسجيل': {
-                reply(`「 الفرع الخاص ل التعليم على البوت 」◣
 
-「 _https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3_ 」◣
 
-「 نرحب بالجميع. 」◣`)
-            }
+
+
+
+
+            
             break
-case '9807786789678': {
+case 'اوامر لاك': {
   	anu = `
 ┏━「 *${botname}* 」━━⭓ 
 ┃╔══☯︎「 MAIN 」☯︎
